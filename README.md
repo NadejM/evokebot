@@ -1,0 +1,2 @@
+# evokebot
+Simple discord bot
