@@ -20,7 +20,7 @@ async def on_message(message):
         name = message.content.split()[1]
         realm = message.content.split()[2]
         ilevel = bnet.ilevelReq(realm, name)
-        out_message = name + " has an average equipped ilevel of " + str(ilevel)
+        out_message = name + "-" + realm + " has an average equipped ilevel of " + str(ilevel)
         await client.send_message(message.channel, out_message)
 
     if message.content.startswith('!achieve'):
