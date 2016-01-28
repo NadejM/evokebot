@@ -6,6 +6,8 @@ import os
 
 client = discord.Client()
 
+PASSWORD = os.environ.get('EVOKEBOT_PASSWORD')
+
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -31,7 +33,7 @@ async def on_message(message):
         await client.send_message(message.channel, out_message)
 
     elif message.content.startswith('!sleep'):
-        await client.send_message(message.channel, 'Sleeping for 60 seconds, fuck you eve')
+        await client.send_message(message.channel, 'Sleeping for 60 seconds. Wake me up when Gorefiend is dead.')
         await asyncio.sleep(60)
         await client.send_message(message.channel, 'Done sleeping')
 
@@ -41,4 +43,4 @@ async def on_message(message):
         elif message.content.startswith('!stats'):
             await client.send_message(message.channel, 'Placeholder for bot stats. (Uptime, messages sent, etc...)')
 
-client.run('evokebot@gmail.com', 'bobnamob')
+client.run('evokebot@gmail.com', PASSWORD)
