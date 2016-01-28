@@ -1,2 +1,2 @@
 # evokebot
-Simple discord bot
+Simple discord bot for Evoke.
