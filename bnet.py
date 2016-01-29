@@ -1,6 +1,3 @@
-#! /usr/bin/env python
-
-# standard Python modules
 import sys
 import os
 import requests
