@@ -38,6 +38,11 @@ async def on_message(message):
             out_message = handle.links(message)
             await client.send_message(message.channel, out_message)
 
+        elif message.content.startswith('!memes'):
+            out_message = handle.memes(message)
+            if out_message is not None:
+                await client.send_message(message.channel, out_message)
+
         elif message.author.name.startswith('Bobnamob'):
             if message.content.startswith('dumb'):
                 await client.send_message(message.channel, 'I am a dumb bot :(')
