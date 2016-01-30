@@ -79,6 +79,15 @@ def achieve(message):
     points = bnet.achievementReq(realm, name)
     out_message = name + "-" + realm + " has " + str(points) + " achievement points."
     return out_message
+  
+#Boss Fights 
+def mhfc(message):
+    diff = message.content.split()[1]
+    fight = message.content.split()[2]
+    video = mythicHFC.mythicbossfights(fight, diff)
+    print(diff,fight)
+    out_message = diff + " " + fight + "  " + str(video)
+    return out_message
 
 #dankmemes
 def memes(message):
