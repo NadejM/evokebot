@@ -42,6 +42,10 @@ async def on_message(message):
             out_message = handle.memes(message)
             if out_message is not None:
                 await client.send_message(message.channel, out_message)
+        
+        elif message.content.startswith('!boss'):
+            out_message = handle.mhfc(message)
+            await client.send_message(message.channel, out_message)
 
         elif message.author.name.startswith('Bobnamob'):
             if message.content.startswith('dumb'):
